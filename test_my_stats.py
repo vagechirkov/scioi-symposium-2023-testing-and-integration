@@ -1,3 +1,5 @@
+import pytest
+
 from my_stats import my_median
 
 
@@ -19,3 +21,10 @@ def test_my_median_basic():
     data = [1, 6, 17, 2, 3]
     result = my_median(data)
     assert result == 3
+
+
+def test_my_median_empty():
+    # if the list is empty, my_median should raise a ValueError exception
+    data = []
+    with pytest.raises(ValueError):
+        my_median(data)
