@@ -53,3 +53,10 @@ test_my_stats.py .                                                              
 ```
 
 </details>
+
+
+## Step 6: run test coverage
+
+```bash
+ pytest -v --cov-report html:cov_html --cov=my_stats
+```

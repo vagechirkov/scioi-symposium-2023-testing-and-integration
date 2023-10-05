@@ -2,7 +2,7 @@ import random
 from statistics import median
 import pytest
 
-from my_stats import my_median
+from my_stats.my_stats import my_median
 
 
 @pytest.mark.parametrize("data, expected", [

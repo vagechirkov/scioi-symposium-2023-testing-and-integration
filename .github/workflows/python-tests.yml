@@ -32,4 +32,4 @@ jobs:
           pytest -vvv
       - name: Run test coverage
         run: |
-          pytest --cov=src --cov-report=xml
+          pytest --cov=my_stats
