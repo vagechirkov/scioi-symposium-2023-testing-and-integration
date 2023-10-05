@@ -1,3 +1,5 @@
+import random
+from statistics import median
 import pytest
 
 from my_stats import my_median
@@ -37,3 +39,11 @@ def test_my_median_not_list():
     with pytest.raises(ValueError) as exc_info:
         my_median(data)
     assert "input_data must be a list-like object of numbers" in str(exc_info.value)
+
+
+def test_my_median_compare_with_math():
+    # compare the results of my_median with math.median
+    for i in range(100):
+        # generate random data
+        data = [random.random() for _ in range(random.randint(1, 100))]
+        assert my_median(data) == median(data)
