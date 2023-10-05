@@ -1,4 +1,15 @@
-def my_median(my_list):
+def my_median(input_data):
+    # make a copy of the list so that the sort does not modify the original list
+    # this is a good practice to check the input data
+    try:
+        my_list = [float(x) for x in input_data]
+    except ValueError:
+        raise ValueError("input_data must be a list-like object of numbers")
+
+    # if the list is empty, raise a ValueError exception
+    if len(my_list) == 0:
+        raise ValueError("input_data must not be empty")
+
     # sort the list
     my_list.sort()
     # get the length of the list
