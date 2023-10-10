@@ -5,6 +5,11 @@ import pytest
 from my_stats.my_stats import my_median
 
 
+@pytest.fixture
+def my_test_dataset():
+    return [1, 2, 3, 4, 5, 6]
+
+
 @pytest.mark.parametrize("data, expected", [
     ([1, 2, 3, 4, 5], 3),
     ([1, 2, 3, 4, 5, 6], 3.5),
@@ -14,6 +19,11 @@ from my_stats.my_stats import my_median
 def test_my_median_basic(data, expected):
     result = my_median(data)
     assert result == expected
+
+
+def test_my_median_on_my_test_dataset(my_test_dataset):
+    result = my_median(my_test_dataset)
+    assert result == 3.5
 
 
 def test_my_median_empty():
