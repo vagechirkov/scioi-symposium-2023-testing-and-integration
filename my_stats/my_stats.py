@@ -1,4 +1,15 @@
 def my_median(input_data):
+    """ Return the median of a list of numbers
+
+    >>> my_median([1, 2, 3, 4, 5])
+    3.0
+    >>> my_median([1, 2, 3, 4, 5, 6])
+    3.5
+    >>> my_median([1, 6, 17])
+    6.0
+    >>> my_median([1, 6, 17, 2, 3])
+    3.0
+    """
     # make a copy of the list so that the sort does not modify the original list
     # this is a good practice to check the input data
     try:
@@ -30,3 +41,9 @@ def my_mean(my_list):
 
 def my_variance(my_list):
     raise NotImplementedError
+
+
+if __name__ == "__main__":
+    import doctest
+
+    doctest.testmod()
