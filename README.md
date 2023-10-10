@@ -1,1 +1,1 @@
-I will cause merge conflict 👾👾👾👾
+Merge conflict example 😈
